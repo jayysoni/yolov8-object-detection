@@ -1,8 +1,60 @@
-## Project Description
+Object Detection & Counting using YOLOv8 and OpenCV
 
-This is a real-time computer vision project 
-using Python that detects the number of people
-in a webcam frame and identifies common objects 
-like mobile phones and watches. It uses object 
-detection and face detection techniques to analyze
-the video feed and provide live results on-screen.
+Live object detection using your webcam with object counts
+
+This project uses the YOLOv8n model from Ultralytics and OpenCV to perform real-time object detection via webcam. It identifies objects, draws bounding boxes, labels them, and displays a live count of total detected objects on the screen.
+
+Demo image :- [Link Text](https://www.linkedin.com/posts/jaayysoni_just-completed-a-real-time-object-and-people-activity-7317939352876060672-bFsP?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFgtzsoBH9VBnC0b0IRgXlvUR205L_JPUz4)
+
+Features
+•	Real-time object detection from webcam feed
+•	Detects and labels multiple objects using YOLOv8
+•	Displays live object count on-screen
+•	Uses lightweight YOLOv8n model for fast performance
+
+Tech Stack
+•	Python 3.13.2
+•	Ultralytics YOLOv8
+•	OpenCV
+
+Installation
+1. Clone the repo
+    git clone https://github.com/jayysoni/object-detection-yolov8.git
+    cd object-detection-yolov8
+2. Create a virtual environment (optional but recommended)
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. install required files (pip,pip3)
+   ultralytics
+   opencv-python
+   Example :-
+                           pip install ultralytics opencv-python 
+                                         or
+                           pip3 install ultralytics opencv-python
+
+4.	Run the detection script
+    python hand.py
+
+
+How It Works / Workflow Section
+
+1. The script initializes a webcam feed using OpenCV.
+2. YOLOv8n (a pre-trained model by Ultralytics) processes each frame in real time.
+3. Detected objects are labeled with bounding boxes.
+4. The total number of detected objects is displayed on the screen.
+
+Limitations
+
+Detection quality may vary in low lighting.
+The script runs on CPU by default; performance can be improved with GPU.
+No class-specific count breakdown (just total count)
+
+Future Improvements
+
+Add class-wise object counting (e.g., 2 persons, 1 cup).
+Include sound alerts for specific object detection.
+Save annotated video or snapshots to disk.
+Option to switch to custom-trained YOLOv8 model.
+
+## Contributing
+Pull requests and suggestions are welcome.
