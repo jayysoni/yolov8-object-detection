@@ -1,4 +1,4 @@
-Object Detection & Counting using YOLOv8 and OpenCV
+## Object Detection & Counting using YOLOv8 and OpenCV
 
 Live object detection using your webcam with object counts
 
@@ -19,42 +19,63 @@ Tech Stack
 
 Installation
 1. Clone the repo
+   ```
     git clone https://github.com/jayysoni/object-detection-yolov8.git
+   ```
+   ```
     cd object-detection-yolov8
+   ```
 2. Create a virtual environment (optional but recommended)
+   ```
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+   ```
+   source venv/bin/activate
+   ```
+ # On Windows: 
+ ```
+ venv\Scripts\activate
+```
 3. install required files (pip,pip3)
+```
    ultralytics
+```
+```
    opencv-python
+```
    Example :-
-                           pip install ultralytics opencv-python 
-                                         or
+   ```
+                           pip install ultralytics opencv-python
+   ```
+   or
+   ```
                            pip3 install ultralytics opencv-python
+   ```
 
 4.	Run the detection script
+   ```
     python hand.py
+   ```
 
+How It Works / Workflow Section<br>
 
-How It Works / Workflow Section
+1. The script initializes a webcam feed using OpenCV.<br>
+2. YOLOv8n (a pre-trained model by Ultralytics) processes each frame in real time.<br.
+3. Detected objects are labeled with bounding boxes.<br>
+4. The total number of detected objects is displayed on the screen.<br>
 
-1. The script initializes a webcam feed using OpenCV.
-2. YOLOv8n (a pre-trained model by Ultralytics) processes each frame in real time.
-3. Detected objects are labeled with bounding boxes.
-4. The total number of detected objects is displayed on the screen.
+Limitations<br>
 
-Limitations
+Detection quality may vary in low lighting.<br>
+The script runs on CPU by default; performance can be improved with GPU.<br>
+No class-specific count breakdown (just total count),<br>
 
-Detection quality may vary in low lighting.
-The script runs on CPU by default; performance can be improved with GPU.
-No class-specific count breakdown (just total count)
+Future Improvements<br>
 
-Future Improvements
-
-Add class-wise object counting (e.g., 2 persons, 1 cup).
-Include sound alerts for specific object detection.
-Save annotated video or snapshots to disk.
-Option to switch to custom-trained YOLOv8 model.
+Add class-wise object counting (e.g., 2 persons, 1 cup).<br>
+Include sound alerts for specific object detection.<br>
+Save annotated video or snapshots to disk.<br>
+Option to switch to custom-trained YOLOv8 model.<br>
 
 ## Contributing
 Pull requests and suggestions are welcome.
